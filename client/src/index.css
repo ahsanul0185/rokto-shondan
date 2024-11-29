@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .section-padding {
+        @apply px-6 md:px-16 lg:px-24 mx-auto
+    }
+}
+
+body {
+    font-family: 'Raleway';
+}
+
+a.active .nav-active_indicator{
+    display: block;
+}
+
+.nav-indicator_mobile.active{
+   background-color: #6A0B37;
+   color: white;
+}
