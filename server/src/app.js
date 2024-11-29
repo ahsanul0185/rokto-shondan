@@ -7,11 +7,15 @@ const cookieParser = require('cookie-parser')
 const cors = require('cors');
 const seedRouter = require("./routers/seedRouter");
 
-const app = express()
+require("dotenv").config();
+
+const app = express();
+
+const originURL = process.env.FRONTEND_URL || "http://localhost:5173"
 
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173" || "https://rokto-shondan-6u7pwck5n-ahsanul-haques-projects.vercel.app", // Replace with your frontend URL
+    origin: originURL,
     credentials: true,              // Allow cookies to be sent
 }));
 app.use(cookieParser());
