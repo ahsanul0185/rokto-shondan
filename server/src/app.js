@@ -11,7 +11,7 @@ const app = express()
 
 app.use(express.json());
 app.use(cors({
-    // origin: "https://rokto-shondan.vercel.app", // Replace with your frontend URL
+    origin: "http://localhost:5173" || "https://rokto-shondan-6u7pwck5n-ahsanul-haques-projects.vercel.app", // Replace with your frontend URL
     credentials: true,              // Allow cookies to be sent
 }));
 app.use(cookieParser());
