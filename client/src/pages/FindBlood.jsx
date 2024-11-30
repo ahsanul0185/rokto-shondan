@@ -22,7 +22,8 @@ const FindBlood = () => {
     const params = new URLSearchParams({
       donorType: donorType || "blood",
       bloodGroup: bloodGroup || '',
-      district : district || ''
+      district : district || '',
+      upazilla : upazilla || '',
     })
     
     navigate(`/donors?${params.toString()}`)
